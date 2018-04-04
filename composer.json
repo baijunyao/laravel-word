@@ -1,0 +1,23 @@
+{
+    "name": "baijunyao/laravel-word",
+    "description": "word",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "baijunyao",
+            "email": "baijunyao@baijunyao.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpword": "0.14.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Baijunyao\\LaravelWord\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    }
+}
