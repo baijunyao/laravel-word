@@ -27,6 +27,9 @@ if ( !function_exists('word_to_html') ) {
      */
     function word_to_html($file)
     {
+        if (!File::isFile($file) || !in_array(File::extension($file), ['doc', 'docx'])) {
+            return '';
+        }
         $phpWord = IOFactory::load($file);
         $xmlWriter = IOFactory::createWriter($phpWord , 'HTML');
         $html = $xmlWriter->getWriterPart('Body')->write();
